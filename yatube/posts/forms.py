@@ -11,7 +11,7 @@ class PostForm(ModelForm):
         )
         self.fields['group'].empty_label = (
             'Тут можно выбрать группу 🙂'
-        ) 
+        )
 
     class Meta:
         model = Post

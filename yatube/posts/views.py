@@ -49,7 +49,7 @@ def profile(request, username):
 def post_detail(request, post_id):
     template = 'posts/post_detail.html'
     post = get_object_or_404(Post, pk=post_id)
-    author = post.author 
+    author = post.author
     context = {
         'post': post,
         'author': author,
