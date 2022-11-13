@@ -41,11 +41,11 @@
             Выйти
           </a>
         </li>
-        <li>
+        <li class="nav-item navbar-text">
           Пользователь: {{ user.username }}
         </li>
         {% else %}
-          ГОСТЬ
+        <li class="nav-item navbar-text">ГОСТЬ</li>
         <li class="nav-item"> 
           <a class="nav-link {% if view_name == 'users:login' %}active{% endif %}"
             href="{% url 'users:login' %}"
