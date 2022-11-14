@@ -16,7 +16,7 @@ def index(request):
     posts = Post.objects.all()
     paginator = paginate(posts, request)
     context = {
-        'page_obj': paginator['page_obj'],
+        'page_obj': paginator,
     }
     return render(request, template, context)
 
@@ -29,7 +29,7 @@ def group_posts(request, slug):
     paginator = paginate(posts, request)
     context = {
         'group': group,
-        'page_obj': paginator['page_obj'],
+        'page_obj': paginator,
     }
     return render(request, template, context)
 
@@ -41,7 +41,7 @@ def profile(request, username):
     paginator = paginate(posts, request)
     context = {
         'author': author,
-        'page_obj': paginator['page_obj'],
+        'page_obj': paginator,
     }
     return render(request, template, context)
 
